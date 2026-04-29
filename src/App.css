@@ -553,3 +553,118 @@ img { display:block; max-width:100%; }
 @keyframes fadeIn { from{opacity:0} to{opacity:1} }
 @keyframes fadeUp { from{opacity:0;transform:translateY(22px)} to{opacity:1;transform:translateY(0)} }
 .page-in { animation:fadeIn .35s ease both; }
+
+/* ── TABLETTE (≤ 768px) ─────────────────────────────────────── */
+@media (max-width:768px) {
+  .sec { padding:65px 1.5rem; }
+  .svc-cards-wrap { padding:55px 1.5rem 65px; }
+  .about-prev-sec { padding:65px 1.5rem; }
+  .destinations-sec { padding:65px 0; }
+  .why-sec, .values-sec { padding:65px 1.5rem; }
+  .cta-banner { padding:70px 1.5rem; }
+  .full-svcs { padding:65px 1.5rem; }
+  .dest-cards-sec { padding:0 1.5rem 65px; }
+  .story-sec { padding:65px 1.5rem; }
+  .contact-sec { padding:65px 1.5rem; }
+  .stats-bar { padding:50px 1.5rem; }
+  .footer { padding:55px 1.5rem 28px; }
+
+  .hero__content { padding:1.5rem; }
+  .hero__desc { font-size:.93rem; }
+
+  .about-prev { gap:56px; }
+  .about-prev__badge { right:12px; }
+
+  .dest-panel { gap:40px; }
+  .destinations-head { padding:0 1.5rem 2rem; }
+  .dest-tabs-nav { padding:0 1.5rem; margin-bottom:2rem; }
+
+  .page-hero { padding:72px 1.5rem 3rem; }
+  .cta-banner__title { font-size:clamp(1.8rem,6vw,3rem); }
+}
+
+/* ── SMARTPHONE (≤ 480px) ───────────────────────────────────── */
+@media (max-width:480px) {
+  /* Sections */
+  .sec { padding:50px 1.25rem; }
+  .svc-cards-wrap { padding:44px 1.25rem 56px; }
+  .about-prev-sec { padding:50px 1.25rem; }
+  .destinations-sec { padding:50px 0; }
+  .why-sec, .values-sec { padding:50px 1.25rem; }
+  .cta-banner { padding:56px 1.25rem; }
+  .full-svcs { padding:50px 1.25rem; }
+  .dest-cards-sec { padding:0 1.25rem 56px; }
+  .story-sec { padding:50px 1.25rem; }
+  .contact-sec { padding:50px 1.25rem; }
+  .stats-bar { padding:40px 1.25rem; }
+  .footer { padding:44px 1.25rem 24px; }
+  .footer__grid { gap:28px; }
+  .footer__bot { flex-direction:column; text-align:center; gap:.4rem; }
+
+  /* Hero */
+  .hero__content { margin-top:80px; padding:1.25rem; }
+  .hero__eyebrow {
+    font-size:.6rem; letter-spacing:.14em; gap:.5rem;
+    flex-wrap:wrap; justify-content:center;
+  }
+  .hero__eyebrow::before, .hero__eyebrow::after { width:16px; }
+  .hero__title { font-size:clamp(2.6rem,13vw,4rem); }
+  .hero__desc { font-size:.88rem; margin:1rem auto 1.8rem; }
+  .hero__actions { flex-direction:column; align-items:stretch; gap:.75rem; }
+  .hero__actions .btn { width:100%; justify-content:center; }
+  .hero__stat { padding:1.2rem .75rem; }
+  .hero__stat-num { font-size:1.6rem; }
+  .hero__stat-lbl { font-size:.58rem; letter-spacing:.1em; }
+
+  /* Buttons */
+  .btn { padding:13px 22px; font-size:.78rem; }
+  .cta-banner__acts { flex-direction:column; align-items:stretch; gap:.75rem; }
+  .cta-banner__acts .btn { width:100%; justify-content:center; }
+  .cta-banner__title { font-size:clamp(1.7rem,8vw,2.4rem); }
+  .cta-banner__sub { font-size:.88rem; margin-bottom:2rem; }
+
+  /* About badge */
+  .about-prev__badge { right:12px; bottom:16px; padding:.9rem 1.1rem; }
+  .about-prev__badge-num { font-size:1.5rem; }
+  .about-prev__badge-lbl { font-size:.6rem; }
+  .about-prev__img-wrap { aspect-ratio:1/1; }
+
+  /* Destinations */
+  .destinations-head { padding:0 1.25rem 1.5rem; }
+  .dest-tabs-nav { padding:0 1.25rem; gap:.4rem; margin-bottom:1.8rem; }
+  .dest-tab { padding:7px 12px; font-size:.62rem; letter-spacing:.08em; }
+  .dest-panel { padding:0 1.25rem; gap:24px; }
+  .dest-panel__title { font-size:clamp(1.6rem,8vw,2.2rem); }
+  .dest-panel__desc { font-size:.86rem; }
+
+  /* Service cards */
+  .svc-card { padding:1.5rem 1.4rem; }
+  .fsvc-card__img { height:170px; }
+  .fsvc-card__body { padding:1.3rem 1.2rem; }
+
+  /* Dest cards */
+  .dcard { aspect-ratio:4/5; }
+
+  /* Page hero */
+  .page-hero { min-height:42vh; padding:72px 1.25rem 2.2rem; }
+  .page-hero__title { font-size:clamp(1.9rem,10vw,2.8rem); line-height:1; }
+  .page-hero__sub { font-size:.86rem; margin-top:.9rem; }
+
+  /* Why / values */
+  .why-card, .val-card { padding:1.8rem 1.4rem; }
+  .why-card__num { font-size:3rem; }
+
+  /* Stats */
+  .stats-bar__num { font-size:2rem; }
+  .stats-bar__item { padding:1.5rem 1rem; }
+  .stats-bar__item:nth-child(2n) { border-right:none; }
+
+  /* Contact */
+  .cinfo__title { font-size:1.4rem; }
+  .cinfo { gap:1.6rem; }
+  .cinfo__list { gap:1rem; }
+
+  /* Sec titles */
+  .sec-title { font-size:clamp(1.5rem,7vw,2rem); }
+  .why-head, .values-head { margin-bottom:2.5rem; }
+}
