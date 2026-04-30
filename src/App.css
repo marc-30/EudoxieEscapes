@@ -533,7 +533,7 @@ img { display:block; max-width:100%; }
 .cinfo__icon  {
   width:44px; height:44px; min-width:44px; border-radius:10px;
   background:var(--orange-lt); display:flex; align-items:center; justify-content:center;
-  font-size:1.1rem; color:var(--orange);
+  color:var(--orange);
 }
 .cinfo__lbl   { font-size:.68rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); }
 .cinfo__val   { font-size:.93rem; font-weight:600; color:var(--dark); margin-top:.2rem; }
