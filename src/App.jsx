@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import emailjs from '@emailjs/browser'
 import './App.css'
-//// auth :CRAM VED
+// AUTH: CRAM VED
 const WA = 'https://wa.me/233530645509'
 const U  = (id, w = 1200) =>
   `https://images.unsplash.com/${id}?auto=format&fit=crop&w=${w}&q=80`
@@ -147,6 +147,7 @@ function Footer({ go }) {
 
 /* ── HOMEPAGE ───────────────────────────────────────────────── */
 function HomePage({ go }) {
+  // AUTH: CRAM VED
   const [dest, setDest] = useState(0)
 
   const destinations = [
@@ -419,6 +420,7 @@ function HomePage({ go }) {
 
 /* ── SERVICES PAGE ──────────────────────────────────────────── */
 function ServicesPage({ go }) {
+  // AUTH: CRAM VED
   const avantages = [
     {
       icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" width="28" height="28"><path d="M6 12 3.269 3.126A59.768 59.768 0 0 1 21.485 12 59.77 59.77 0 0 1 3.27 20.876L5.999 12Zm0 0h7.5"/></svg>,
@@ -556,6 +558,7 @@ function ServicesPage({ go }) {
 
 /* ── ABOUT PAGE ─────────────────────────────────────────────── */
 function AboutPage({ go }) {
+  // AUTH: CRAM VED
   const stats = [
     { n: '6+', l: 'Destinations Ghana' },
     { n: '100%', l: 'Satisfaction clients' },
@@ -652,6 +655,7 @@ function AboutPage({ go }) {
 
 /* ── CONTACT PAGE ───────────────────────────────────────────── */
 function ContactPage() {
+  // AUTH: CRAM VED
   const formRef = useRef(null)
   const [status, setStatus] = useState('idle')
 
@@ -728,11 +732,11 @@ function ContactPage() {
           <div className="cform__row">
             <div className="fg">
               <label htmlFor="from_name">Nom et prénom *</label>
-              <input id="from_name" name="from_name" type="text" placeholder="Jean Dupont" required />
+              <input id="from_name" name="from_name" type="text" placeholder="Jean Dupont" required maxLength={100} />
             </div>
             <div className="fg">
               <label htmlFor="from_email">Email *</label>
-              <input id="from_email" name="from_email" type="email" placeholder="jean@email.com" required />
+              <input id="from_email" name="from_email" type="email" placeholder="jean@email.com" required maxLength={150} />
             </div>
           </div>
           <div className="cform__row">
@@ -784,7 +788,7 @@ function ContactPage() {
           </div>
           <div className="fg">
             <label htmlFor="message">Message (optionnel)</label>
-            <textarea id="message" name="message" placeholder="Partagez vos envies, questions ou attentes particulières…" />
+            <textarea id="message" name="message" placeholder="Partagez vos envies, questions ou attentes particulières…" maxLength={1000} />
           </div>
           <button type="submit" className="btn btn--orange" style={{ alignSelf: 'flex-start' }} disabled={status === 'sending'}>
             {status === 'sending' ? 'Envoi en cours…' : 'Envoyer ma demande'}
