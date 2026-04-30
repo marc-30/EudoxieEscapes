@@ -8,7 +8,7 @@
 
 **Eudoxie Escapes** est une agence de voyage haut de gamme spécialisée dans les séjours au Ghana. Ce dépôt contient le code source du site web officiel, développé avec React et Vite.
 
-Le site présente les offres de l'agence (voyages privés, séjours de groupe, séjours linguistiques), les destinations phares du Ghana, et intègre un formulaire de réservation connecté à EmailJS.
+Le site présente les offres de l'agence (voyages privés, séjours de groupe, séjours linguistiques), les destinations phares du Ghana, et intègre un formulaire de réservation complet connecté à EmailJS.
 
 ---
 
@@ -20,7 +20,7 @@ Le site présente les offres de l'agence (voyages privés, séjours de groupe, s
 | Vite | 5 | Build tool & dev server |
 | EmailJS | @emailjs/browser | Envoi de formulaire sans backend |
 | Google Fonts | — | Montserrat + Dancing Script |
-| Vercel | — | Hébergement & déploiement |
+| Vercel | — | Hébergement & déploiement continu |
 
 ---
 
@@ -28,21 +28,21 @@ Le site présente les offres de l'agence (voyages privés, séjours de groupe, s
 
 ```
 EudoxieEscapes/
-├── public/                 # Images locales (servies statiquement)
-│   ├── offre couple.jpg
-│   ├── offre 2personnes.jpg
+├── public/                       # Images (servies statiquement en prod)
+│   ├── akosombo.jpg
+│   ├── big-ada.jpeg
+│   ├── bojo-beach.jpg
+│   ├── cascades.jpeg
 │   ├── entreprise ou groupe.jpg
-│   ├── goma.jpg
 │   ├── hero-2.jpg
-│   ├── APART.jpg
-│   ├── kwame.jpg
-│   └── sejour groupe.jpg
+│   ├── offre 2personnes.jpg
+│   └── offre couple.jpg
 ├── src/
-│   ├── App.jsx             # Application complète (toutes les pages)
-│   ├── App.css             # Styles globaux
-│   └── main.jsx            # Point d'entrée React
+│   ├── App.jsx                   # Application complète (toutes les pages)
+│   ├── App.css                   # Styles globaux
+│   └── main.jsx                  # Point d'entrée React
 ├── index.html
-├── vercel.json             # Configuration Vercel + headers sécurité
+├── vercel.json                   # Configuration Vercel + headers sécurité
 └── vite.config.js
 ```
 
@@ -50,10 +50,12 @@ EudoxieEscapes/
 
 ## Pages
 
-- **Accueil** — Hero plein écran, destinations phares, services résumés, CTA
-- **Nos Services** — 3 offres (flyers), section avantages inclus, destinations Ghana
-- **À Propos** — Histoire de l'agence, chiffres clés, valeurs
-- **Contact** — Formulaire de réservation complet + coordonnées
+| Page | Contenu |
+|---|---|
+| **Accueil** | Hero plein écran, slider destinations, cards services, aperçu À Propos, CTA |
+| **Nos Services** | 3 flyers d'offres, section 6 avantages inclus, grille destinations Ghana |
+| **À Propos** | Histoire de l'agence, statistiques, valeurs, section destinations |
+| **Réservation** | Formulaire complet de demande de devis + coordonnées + conditions |
 
 ---
 
@@ -92,7 +94,7 @@ Les fichiers compilés sont générés dans le dossier `dist/`.
 
 ## Configuration EmailJS
 
-Le formulaire de contact utilise EmailJS (aucun backend requis).
+Le formulaire de réservation utilise EmailJS (aucun backend requis).
 
 | Paramètre | Valeur |
 |---|---|
@@ -103,15 +105,39 @@ Le formulaire de contact utilise EmailJS (aucun backend requis).
 **Variables du template** à configurer sur emailjs.com :
 
 ```
-{{from_name}}     — Nom du demandeur
-{{from_email}}    — Email du demandeur
-{{participants}}  — Nombre de participants
-{{stay_type}}     — Type de séjour
-{{travel_month}}  — Mois du voyage
-{{travel_year}}   — Année du voyage
-{{budget}}        — Budget estimé (optionnel)
-{{message}}       — Message libre (optionnel)
+{{from_name}}      — Nom complet du demandeur
+{{from_email}}     — Adresse email
+{{phone}}          — Numéro WhatsApp
+{{stay_type}}      — Type de séjour
+{{participants}}   — Nombre de participants
+{{travel_month}}   — Mois souhaité
+{{travel_year}}    — Année souhaitée
+{{duration}}       — Durée du séjour
+{{accommodation}}  — Type d'hébergement souhaité
+{{budget}}         — Budget estimé (optionnel)
+{{message}}        — Message libre (optionnel)
 ```
+
+**Subject suggéré :** `Réservation : {{stay_type}} — {{from_name}}`
+
+---
+
+## Formulaire de réservation
+
+Le formulaire collecte toutes les informations nécessaires à l'établissement d'un devis :
+
+1. Nom et prénom
+2. Email
+3. Numéro WhatsApp
+4. Nombre de participants
+5. Type de séjour
+6. Période souhaitée (mois + année)
+7. Durée du séjour
+8. Type d'hébergement
+9. Budget estimé (optionnel)
+10. Message libre (optionnel)
+
+Les conditions de réservation (acompte 50 % non remboursable, solde à l'arrivée) sont affichées dans le formulaire avant le bouton d'envoi.
 
 ---
 
@@ -121,34 +147,33 @@ Le formulaire de contact utilise EmailJS (aucun backend requis).
 
 Les headers suivants sont appliqués sur toutes les routes en production :
 
-| Header | Valeur |
+| Header | Protection |
 |---|---|
-| `X-Frame-Options` | `DENY` — protection clickjacking |
-| `X-Content-Type-Options` | `nosniff` — protection MIME sniffing |
-| `X-XSS-Protection` | `1; mode=block` |
-| `Referrer-Policy` | `strict-origin-when-cross-origin` |
-| `Strict-Transport-Security` | HTTPS forcé (HSTS) |
+| `X-Frame-Options: DENY` | Clickjacking |
+| `X-Content-Type-Options: nosniff` | MIME sniffing |
+| `X-XSS-Protection: 1; mode=block` | XSS basique |
+| `Referrer-Policy` | Fuite d'URL |
+| `Strict-Transport-Security` | Force HTTPS (HSTS) |
 | `Content-Security-Policy` | Sources autorisées uniquement |
 | `Permissions-Policy` | Caméra, micro, géolocalisation désactivés |
 
 ### Mesures en place
 
 - Aucun `dangerouslySetInnerHTML` dans le code
-- Tous les liens externes ont `rel="noreferrer noopener"`
-- Inputs texte limités (`maxLength`) pour éviter les payloads excessifs
-- Champs à choix libres remplacés par des `<select>` contrôlés
-- Validation HTML5 native (`required`, `type="email"`)
+- Tous les liens externes ont `rel="noreferrer"`
+- `maxLength` sur tous les champs texte libres
+- Champs à choix contraints via `<select>` (pas d'injection possible)
+- Validation HTML5 native (`required`, `type="email"`, `type="tel"`)
 
-### Note sur la dépendance esbuild
+### Note esbuild
 
-`npm audit` signale une vulnérabilité modérée dans `esbuild` ≤ 0.24.2 (via Vite 5).
-Cette vulnérabilité concerne uniquement le **serveur de développement local** et n'affecte pas le site déployé en production. La correction nécessite une migration vers Vite 8 (changement majeur).
+`npm audit` signale une vulnérabilité modérée dans `esbuild` ≤ 0.24.2 (via Vite 5). Elle concerne uniquement le **serveur de développement local** — aucun impact en production. La correction nécessite une migration vers Vite 8 (changement majeur).
 
 ---
 
 ## Déploiement
 
-Le site est hébergé sur **Vercel** avec déploiement automatique à chaque push sur la branche `master`.
+Hébergé sur **Vercel** avec déploiement automatique à chaque push sur `master`.
 
 ```
 Dépôt GitHub   →   Vercel (auto-deploy)   →   eudoxieescapes.com
@@ -156,11 +181,11 @@ Dépôt GitHub   →   Vercel (auto-deploy)   →   eudoxieescapes.com
 
 ---
 
-## Contact client
+## Contact agence
 
-- **Téléphone / WhatsApp** : +233 530 645 509
+- **WhatsApp** : +233 530 645 509
 - **Email** : contact@eudoxieescapes.com
-- **Adresses** : Accra, Ghana · Abidjan, Côte d'Ivoire
+- **Bureaux** : Accra, Ghana · Abidjan, Côte d'Ivoire
 
 ---
 
