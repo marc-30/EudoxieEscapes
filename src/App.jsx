@@ -47,7 +47,6 @@ function Navbar({ page, go }) {
     { id: 'accueil',  label: 'Accueil' },
     { id: 'services', label: 'Nos Services' },
     { id: 'apropos',  label: 'À Propos' },
-    { id: 'contact',  label: 'Réservation' },
   ]
 
   return (
