@@ -241,8 +241,8 @@ function HomePage({ go }) {
           {[
             {
               icon: (
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M6 12 3.269 3.126A59.768 59.768 0 0 1 21.485 12 59.77 59.77 0 0 1 3.27 20.876L5.999 12Zm0 0h7.5"/>
+                <svg viewBox="0 0 32 32" fill="currentColor">
+                  <path d="M29 14.15 18 8V4a2 2 0 0 0-4 0v4L3 14.15a1 1 0 0 0-.5.87V17a.5.5 0 0 0 .6.49L12 15.56V20l-2.4 1.8A1 1 0 0 0 9 23v2a.5.5 0 0 0 .67.47L16 23l6.33 2.47A.5.5 0 0 0 23 25v-2a1 1 0 0 0-.4-.8L20 20v-4.44l8.9 1.93A.5.5 0 0 0 29.5 17v-1.98a1 1 0 0 0-.5-.87z"/>
                 </svg>
               ),
               title: 'Voyages sur mesure',
@@ -250,8 +250,8 @@ function HomePage({ go }) {
             },
             {
               icon: (
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M8.25 21v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21m0 0h4.5V3.545M12.75 21h7.5V10.75M2.25 21h1.5m18 0h-18M2.25 9l4.5-1.636M18.75 3l-1.5.545m0 6.205 3 1m1.5.5-1.5-.5M6.75 7.364V3h-3v18m3-13.636 10.5-3.819"/>
+                <svg viewBox="0 0 32 32" fill="currentColor">
+                  <path d="M28 14v-4a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v4a4 4 0 0 0-2 3.46V26h2v-2h24v2h2V17.46A4 4 0 0 0 28 14zm-4-6a2 2 0 0 1 2 2v3.17A3.99 3.99 0 0 0 24 13h-6V8zm-16 2a2 2 0 0 1 2-2h6v5H8a3.99 3.99 0 0 0-2 .17V10zm-2 7.46A2 2 0 0 1 8 15h16a2 2 0 0 1 2 2v5H4z"/>
                 </svg>
               ),
               title: 'Hébergements premium',
@@ -259,8 +259,8 @@ function HomePage({ go }) {
             },
             {
               icon: (
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M9 6.75V15m6-6v8.25m.503 3.498 4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 0 0-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0z"/>
+                <svg viewBox="0 0 32 32" fill="currentColor">
+                  <path d="M29 8h-5l-2-4H10L8 8H3a1 1 0 0 0-1 1v18a1 1 0 0 0 1 1h26a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1zm-1 18H4V10h5l2-4h10l2 4h5zM16 12a6 6 0 1 0 6 6 6 6 0 0 0-6-6zm0 10a4 4 0 1 1 4-4 4 4 0 0 1-4 4z"/>
                 </svg>
               ),
               title: 'Visites guidées',
@@ -268,8 +268,8 @@ function HomePage({ go }) {
             },
             {
               icon: (
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25"/>
+                <svg viewBox="0 0 32 32" fill="currentColor">
+                  <path d="M28 4H12a4 4 0 0 0-4 4v2H4a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h16a4 4 0 0 0 4-4v-2h4a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm-6 22a2 2 0 0 1-2 2H4V12h16zM26 22h-4V12a2 2 0 0 0-2-2H10V8a2 2 0 0 1 2-2h16z"/>
                 </svg>
               ),
               title: 'Séjours linguistiques',
