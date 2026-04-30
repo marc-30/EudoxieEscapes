@@ -162,7 +162,7 @@ function HomePage({ go }) {
       tag: 'Histoire & Océan',
       desc: "Entre l'imposant château classé UNESCO et les plages de sable doré, Cape Coast vous plonge dans l'histoire du Ghana tout en offrant des eaux turquoise spectaculaires.",
       feats: ['Patrimoine UNESCO', 'Plages', 'Histoire', 'Surf'],
-      img: U('accra ghana.jpg'),
+      img: U('photo-1519046904884-53103b34b206'),
     },
     {
       name: 'Big Ada',
@@ -176,14 +176,14 @@ function HomePage({ go }) {
       tag: 'Lac Volta',
       desc: "Le plus grand lac artificiel du monde vous attend. Croisières sur le lac Volta, barrages impressionnants et villages de pêcheurs authentiques à découvrir.",
       feats: ['Lac Volta', 'Croisières', 'Randonnée', 'Villages'],
-      img: U('hero-2.jpg'),
+      img: '/hero-2.jpg',
     },
     {
       name: 'Gomoa Fetteh',
       tag: 'Plage de rêve',
       desc: "Lagune émeraude, cocotiers et sable blanc à perte de vue. Gomoa Fetteh est la destination idéale pour un séjour balnéaire d'exception, loin de l'agitation.",
       feats: ['Lagune', 'Plage privée', 'Détente', 'Luxe'],
-      img: '/src/goma.jpg',
+      img: '/goma.jpg',
     },
     {
       name: 'Adukrom',
@@ -421,10 +421,10 @@ function HomePage({ go }) {
 function ServicesPage({ go }) {
   const svcs = [
     { name: 'Voyages sur mesure',    img: U('photo-1436491865332-7a61a109cc05'), desc: "Nous concevons votre itinéraire de A à Z — vol, hébergement, activités — parfaitement adapté à votre groupe et vos attentes." },
-    { name: 'Séjours de groupe',     img: '/src/sejour%20groupe.jpg', desc: "Groupes d'amis, de famille ou professionnels : nous gérons la logistique complète pour des séjours collectifs sans stress." },
+    { name: 'Séjours de groupe',     img: '/entreprise%20ou%20groupe.jpg', desc: "Groupes d'amis, de famille ou professionnels : nous gérons la logistique complète pour des séjours collectifs sans stress." },
     { name: 'Séjours linguistiques', img: U('photo-1503220317375-aaad61436b1b'), desc: "Apprenez l'anglais en situation réelle au cœur du Ghana avec des programmes pédagogiques et culturels immersifs." },
-    { name: 'Hébergements premium',  img: '/src/Apart.jpg', desc: "Villas, appartements et maisons d'hôtes sélectionnés pour leur qualité, leur confort et leur emplacement stratégique." },
-    { name: 'Visites guidées',       img: '/src/Kwame%20Nkrumah%20Memorial%20Park-Ghana%F0%9F%87%AC%F0%9F%87%AD.jpg', desc: "Nos guides locaux vous emmènent découvrir les sites incontournables et les trésors cachés du Ghana authentique." },
+    { name: 'Hébergements premium',  img: '/APART.jpg', desc: "Villas, appartements et maisons d'hôtes sélectionnés pour leur qualité, leur confort et leur emplacement stratégique." },
+    { name: 'Visites guidées',       img: '/kwame.jpg', desc: "Nos guides locaux vous emmènent découvrir les sites incontournables et les trésors cachés du Ghana authentique." },
     { name: 'Expériences premium',   img: U('photo-1582719508461-905c673771fd'), desc: "Excursions exclusives, dîners privés, spa et événements sur mesure pour une expérience de voyage d'exception." },
   ]
 
@@ -433,7 +433,7 @@ function ServicesPage({ go }) {
     { name: 'Cape Coast',   sub: 'UNESCO & Plages',      badge: 'Populaire',img: U('photo-1519046904884-53103b34b206') },
     { name: 'Big Ada',      sub: 'Nature & Estuaire',   badge: 'Nature',   img: U('photo-1499793983690-e29da59ef1c2') },
     { name: 'Akosombo',     sub: 'Lac Volta',            badge: 'Insolite', img: U('photo-1506905925346-21bda4d32df4') },
-    { name: 'Gomoa Fetteh', sub: 'Plage & Lagune',       badge: 'Luxe',     img: '/src/goma.jpg' },
+    { name: 'Gomoa Fetteh', sub: 'Plage & Lagune',       badge: 'Luxe',     img: '/goma.jpg' },
     { name: 'Adukrom',      sub: 'Forêt & Cascades',    badge: 'Éco',      img: U('photo-1441974231531-c6227db76b6e') },
   ]
 
@@ -459,9 +459,9 @@ function ServicesPage({ go }) {
         </div>
         <div className="pkg-grid">
           {[
-            { img: '/src/offre%20couple.jpg',           alt: 'Package Couple — 5 jours / 4 nuits' },
-            { img: '/src/offre%202personnes.jpg',        alt: 'Offre Séjour — 3 nuits / 4 jours pour 2 personnes' },
-            { img: '/src/entreprise%20ou%20groupe.jpg',  alt: 'Offre Entreprises / Groupes' },
+            { img: '/offre%20couple.jpg',           alt: 'Package Couple — 5 jours / 4 nuits' },
+            { img: '/offre%202personnes.jpg',        alt: 'Offre Séjour — 3 nuits / 4 jours pour 2 personnes' },
+            { img: '/entreprise%20ou%20groupe.jpg',  alt: 'Offre Entreprises / Groupes' },
           ].map(p => (
             <div className="pkg-card" key={p.alt}>
               <img src={p.img} alt={p.alt} loading="lazy" />
