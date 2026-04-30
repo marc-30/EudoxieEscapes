@@ -770,6 +770,10 @@ function ContactPage() {
               <input id="from_email" name="from_email" type="email" placeholder="coffyayawa@GMAIL.com" required maxLength={150} />
             </div>
           </div>
+          <div className="fg">
+            <label htmlFor="phone">Numéro WhatsApp *</label>
+            <input id="phone" name="phone" type="tel" placeholder="+33 6 00 00 00 00" required maxLength={20} />
+          </div>
           <div className="cform__row">
             <div className="fg">
               <label htmlFor="participants">Nombre de participants *</label>
