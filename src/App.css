@@ -558,6 +558,13 @@ img { display:block; max-width:100%; }
 .fg input::placeholder, .fg textarea::placeholder { color:#bbb; }
 .fg select { cursor:pointer; }
 .fg textarea { resize:vertical; min-height:130px; }
+.cform__intro {
+  padding:.9rem 1.1rem;
+  background:#f6f6f6;
+  border-radius:8px;
+  font-size:.84rem; color:var(--muted); line-height:1.6;
+}
+.cform__intro strong { color:var(--orange); }
 .cform__conditions {
   padding:1.2rem 1.4rem;
   background:#fdf5f2;

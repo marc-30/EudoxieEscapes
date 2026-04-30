@@ -47,7 +47,7 @@ function Navbar({ page, go }) {
     { id: 'accueil',  label: 'Accueil' },
     { id: 'services', label: 'Nos Services' },
     { id: 'apropos',  label: 'À Propos' },
-    { id: 'contact',  label: 'Contact' },
+    { id: 'contact',  label: 'Réservation' },
   ]
 
   return (
@@ -683,19 +683,19 @@ function ContactPage() {
         <div className="page-hero__bg" style={{ backgroundImage: `url(${U('photo-1507525428034-b723cf961d3e', 1920)})` }} />
         <div className="page-hero__ov" />
         <div className="page-hero__cnt">
-          <span className="page-hero__label">Nous contacter</span>
-          <h1 className="page-hero__title">Contactez-nous</h1>
-          <p className="page-hero__sub">Planifiez votre séjour au Ghana — réponse garantie sous 24 heures.</p>
+          <span className="page-hero__label">Demande de devis</span>
+          <h1 className="page-hero__title">Réservez votre séjour</h1>
+          <p className="page-hero__sub">Remplissez le formulaire ci-dessous — nous vous envoyons votre devis personnalisé sous 24 heures.</p>
         </div>
       </div>
 
       <div className="contact-sec">
         {/* Info */}
         <div className="cinfo">
-          <h2 className="cinfo__title">Parlons de votre voyage</h2>
+          <h2 className="cinfo__title">Obtenez votre devis gratuit</h2>
           <p className="cinfo__sub">
-            Dites-nous vos envies et nous construisons ensemble le séjour idéal.
-            Chaque demande est traitée avec soin par notre équipe locale.
+            Remplissez le formulaire avec les détails de votre séjour. Notre équipe
+            établit votre devis personnalisé et vous répond sous 24h.
           </p>
           <div className="cinfo__list">
             {[
@@ -753,9 +753,12 @@ function ContactPage() {
           className={`cform${status === 'sending' ? ' form-sending' : ''}`}
           onSubmit={handleSubmit}
         >
+          <div className="cform__intro">
+            <p>Pour recevoir votre devis, merci de renseigner les informations suivantes. Tous les champs marqués <strong>*</strong> sont obligatoires.</p>
+          </div>
           {status === 'ok' && (
             <p className="form-ok">
-              ✓ Votre demande a été envoyée ! Nous vous répondons sous 24h.
+              ✓ Votre demande a bien été reçue ! Nous vous envoyons votre devis sous 24h.
             </p>
           )}
           <div className="cform__row">
@@ -849,7 +852,7 @@ function ContactPage() {
           </div>
 
           <button type="submit" className="btn btn--orange" style={{ alignSelf: 'flex-start' }} disabled={status === 'sending'}>
-            {status === 'sending' ? 'Envoi en cours…' : 'Envoyer ma demande'}
+            {status === 'sending' ? 'Envoi en cours…' : 'Demander mon devis gratuit'}
           </button>
         </form>
       </div>
