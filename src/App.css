@@ -558,6 +558,24 @@ img { display:block; max-width:100%; }
 .fg input::placeholder, .fg textarea::placeholder { color:#bbb; }
 .fg select { cursor:pointer; }
 .fg textarea { resize:vertical; min-height:130px; }
+.cform__conditions {
+  padding:1.2rem 1.4rem;
+  background:#fdf5f2;
+  border:1px solid rgba(200,75,17,.2);
+  border-left:4px solid var(--orange);
+  border-radius:0 8px 8px 0;
+}
+.cform__conditions-title {
+  font-size:.7rem; font-weight:700; letter-spacing:.18em;
+  text-transform:uppercase; color:var(--orange); margin-bottom:.65rem;
+}
+.cform__conditions-list {
+  margin:0; padding-left:1.2rem;
+  display:flex; flex-direction:column; gap:.4rem;
+}
+.cform__conditions-list li {
+  font-size:.84rem; color:var(--text); line-height:1.6;
+}
 .form-ok {
   padding:1.4rem 1.6rem; border-radius:10px;
   background:rgba(200,75,17,.06); border:1px solid rgba(200,75,17,.2);

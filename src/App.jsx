@@ -790,8 +790,8 @@ function ContactPage() {
           </div>
           <div className="cform__row">
             <div className="fg">
-              <label htmlFor="travel_month">Mois souhaité</label>
-              <select id="travel_month" name="travel_month">
+              <label htmlFor="travel_month">Mois souhaité *</label>
+              <select id="travel_month" name="travel_month" required>
                 <option value="">Mois</option>
                 {['Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Août','Septembre','Octobre','Novembre','Décembre'].map(m => (
                   <option key={m} value={m}>{m}</option>
@@ -799,10 +799,30 @@ function ContactPage() {
               </select>
             </div>
             <div className="fg">
-              <label htmlFor="travel_year">Année</label>
-              <select id="travel_year" name="travel_year">
+              <label htmlFor="travel_year">Année *</label>
+              <select id="travel_year" name="travel_year" required>
                 <option value="">Année</option>
                 {['2025','2026','2027'].map(y => <option key={y} value={y}>{y}</option>)}
+              </select>
+            </div>
+          </div>
+          <div className="cform__row">
+            <div className="fg">
+              <label htmlFor="duration">Durée du séjour *</label>
+              <select id="duration" name="duration" required>
+                <option value="">Sélectionner</option>
+                {['3 nuits / 4 jours','4 nuits / 5 jours','5 nuits / 6 jours','1 semaine','2 semaines','Plus de 2 semaines','À définir'].map(d => (
+                  <option key={d} value={d}>{d}</option>
+                ))}
+              </select>
+            </div>
+            <div className="fg">
+              <label htmlFor="accommodation">Type d'hébergement souhaité *</label>
+              <select id="accommodation" name="accommodation" required>
+                <option value="">Sélectionner</option>
+                {['Villa privée','Appartement meublé','Maison d\'hôtes','Hôtel','Sur conseil de l\'agence'].map(a => (
+                  <option key={a} value={a}>{a}</option>
+                ))}
               </select>
             </div>
           </div>
@@ -819,6 +839,15 @@ function ContactPage() {
             <label htmlFor="message">Message (optionnel)</label>
             <textarea id="message" name="message" placeholder="Partagez vos envies, questions ou attentes particulières…" maxLength={1000} />
           </div>
+
+          <div className="cform__conditions">
+            <div className="cform__conditions-title">Conditions de réservation</div>
+            <ul className="cform__conditions-list">
+              <li>La réservation est confirmée par un <strong>acompte de 50 %</strong> non remboursable.</li>
+              <li>Le <strong>solde est à régler à votre arrivée</strong> au Ghana.</li>
+            </ul>
+          </div>
+
           <button type="submit" className="btn btn--orange" style={{ alignSelf: 'flex-start' }} disabled={status === 'sending'}>
             {status === 'sending' ? 'Envoi en cours…' : 'Envoyer ma demande'}
           </button>
