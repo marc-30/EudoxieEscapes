@@ -170,14 +170,14 @@ function HomePage({ go }) {
       tag: 'Estuaire & Nature',
       desc: "À la rencontre de la Volta et de l'Atlantique, Big Ada est un paradis naturel préservé. Croisières en pirogue, oiseaux migrateurs et couchers de soleil magiques.",
       feats: ['Nature', 'Croisières', 'Pêche', 'Détente'],
-      img: U('photo-1499793983690-e29da59ef1c2'),
+      img: '/big-ada.jpeg',
     },
     {
       name: 'Akosombo',
       tag: 'Lac Volta',
       desc: "Le plus grand lac artificiel du monde vous attend. Croisières sur le lac Volta, barrages impressionnants et villages de pêcheurs authentiques à découvrir.",
       feats: ['Lac Volta', 'Croisières', 'Randonnée', 'Villages'],
-      img: '/hero-2.jpg',
+      img: '/akosombo.jpg',
     },
     {
       name: 'Gomoa Fetteh',
@@ -457,8 +457,8 @@ function ServicesPage({ go }) {
   const dests = [
     { name: 'Accra',        sub: 'Capitale & Culture',  badge: 'Top',     img: U('photo-1660675133902-acd1b057f75d') },
     { name: 'Cape Coast',   sub: 'UNESCO & Plages',      badge: 'Populaire',img: '/bojo-beach.jpg' },
-    { name: 'Big Ada',      sub: 'Nature & Estuaire',   badge: 'Nature',   img: U('photo-1499793983690-e29da59ef1c2') },
-    { name: 'Akosombo',     sub: 'Lac Volta',            badge: 'Insolite', img: U('photo-1506905925346-21bda4d32df4') },
+    { name: 'Big Ada',      sub: 'Nature & Estuaire',   badge: 'Nature',   img: '/big-ada.jpeg' },
+    { name: 'Akosombo',     sub: 'Lac Volta',            badge: 'Insolite', img: '/akosombo.jpg' },
     { name: 'Gomoa Fetteh', sub: 'Plage & Lagune',       badge: 'Luxe',     img: '/cascades.jpeg' },
     { name: 'Adukrom',      sub: 'Forêt & Cascades',    badge: 'Éco',      img: U('photo-1441974231531-c6227db76b6e') },
   ]
