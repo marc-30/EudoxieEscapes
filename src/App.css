@@ -396,6 +396,43 @@ img { display:block; max-width:100%; }
 }
 .pkg-card__footer .btn { width:100%; justify-content:center; }
 
+/* Avantages section */
+.avantages-sec {
+  padding:80px clamp(1.5rem,6vw,5rem);
+  background:var(--gray);
+}
+.avantages-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:2rem;
+  max-width:1100px; margin:0 auto;
+}
+@media (max-width:900px) { .avantages-grid { grid-template-columns:repeat(2,1fr); } }
+@media (max-width:560px)  { .avantages-grid { grid-template-columns:1fr; } }
+.avantage-item {
+  display:flex; align-items:flex-start; gap:1.1rem;
+  background:#fff; border-radius:var(--r);
+  padding:1.6rem 1.4rem;
+  box-shadow:0 2px 16px rgba(0,0,0,.06);
+  transition:transform var(--t), box-shadow var(--t);
+}
+.avantage-item:hover { transform:translateY(-4px); box-shadow:var(--sh); }
+.avantage-item__icon {
+  flex-shrink:0;
+  width:52px; height:52px;
+  background:var(--orange-lt);
+  border-radius:10px;
+  display:flex; align-items:center; justify-content:center;
+  color:var(--orange);
+}
+.avantage-item__name {
+  font-size:.95rem; font-weight:700;
+  color:var(--text); margin-bottom:.35rem;
+}
+.avantage-item__desc {
+  font-size:.83rem; color:var(--muted); line-height:1.55;
+}
+
 /* Dest cards grid */
 .dest-cards-sec {
   padding:0 clamp(1.5rem,6vw,5rem) 90px;
