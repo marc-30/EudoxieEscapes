@@ -335,7 +335,7 @@ function HomePage({ go }) {
           <h2 className="sec-title sec-title--w">Explorez le Ghana</h2>
           <p className="sec-sub sec-sub--w">
             Six destinations d'exception, chacune avec sa propre personnalité.
-            Prochainement : Sénégal et Zanzibar.
+            Prochainement : Sénégal et au Zanzibar.
           </p>
         </div>
         <div className="dest-tabs-nav">
@@ -601,7 +601,7 @@ function AboutPage({ go }) {
             par notre équipe locale.
           </p>
           <p>
-            Bientôt, nous étendrons notre expertise au Sénégal et à Zanzibar.
+            Bientôt, nous étendrons notre expertise au Sénégal et au Zanzibar.
             En attendant, le Ghana n'a plus aucun secret pour nous.
           </p>
           <button className="btn btn--orange" style={{ alignSelf: 'flex-start' }} onClick={() => go('contact')}>
