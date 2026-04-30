@@ -163,7 +163,7 @@ function HomePage({ go }) {
       tag: 'Histoire & Océan',
       desc: "Entre l'imposant château classé UNESCO et les plages de sable doré, Cape Coast vous plonge dans l'histoire du Ghana tout en offrant des eaux turquoise spectaculaires.",
       feats: ['Patrimoine UNESCO', 'Plages', 'Histoire', 'Surf'],
-      img: U('photo-1519046904884-53103b34b206'),
+      img: '/bojo-beach.jpg',
     },
     {
       name: 'Big Ada',
@@ -184,7 +184,7 @@ function HomePage({ go }) {
       tag: 'Plage de rêve',
       desc: "Lagune émeraude, cocotiers et sable blanc à perte de vue. Gomoa Fetteh est la destination idéale pour un séjour balnéaire d'exception, loin de l'agitation.",
       feats: ['Lagune', 'Plage privée', 'Détente', 'Luxe'],
-      img: '/goma.jpg',
+      img: '/cascades.jpeg',
     },
     {
       name: 'Adukrom',
@@ -456,10 +456,10 @@ function ServicesPage({ go }) {
 
   const dests = [
     { name: 'Accra',        sub: 'Capitale & Culture',  badge: 'Top',     img: U('photo-1660675133902-acd1b057f75d') },
-    { name: 'Cape Coast',   sub: 'UNESCO & Plages',      badge: 'Populaire',img: U('photo-1519046904884-53103b34b206') },
+    { name: 'Cape Coast',   sub: 'UNESCO & Plages',      badge: 'Populaire',img: '/bojo-beach.jpg' },
     { name: 'Big Ada',      sub: 'Nature & Estuaire',   badge: 'Nature',   img: U('photo-1499793983690-e29da59ef1c2') },
     { name: 'Akosombo',     sub: 'Lac Volta',            badge: 'Insolite', img: U('photo-1506905925346-21bda4d32df4') },
-    { name: 'Gomoa Fetteh', sub: 'Plage & Lagune',       badge: 'Luxe',     img: '/goma.jpg' },
+    { name: 'Gomoa Fetteh', sub: 'Plage & Lagune',       badge: 'Luxe',     img: '/cascades.jpeg' },
     { name: 'Adukrom',      sub: 'Forêt & Cascades',    badge: 'Éco',      img: U('photo-1441974231531-c6227db76b6e') },
   ]
 
@@ -764,11 +764,11 @@ function ContactPage() {
           <div className="cform__row">
             <div className="fg">
               <label htmlFor="from_name">Nom et prénom *</label>
-              <input id="from_name" name="from_name" type="text" placeholder="Jean Dupont" required maxLength={100} />
+              <input id="from_name" name="from_name" type="text" placeholder="Coffy AYAWA" required maxLength={100} />
             </div>
             <div className="fg">
               <label htmlFor="from_email">Email *</label>
-              <input id="from_email" name="from_email" type="email" placeholder="jean@email.com" required maxLength={150} />
+              <input id="from_email" name="from_email" type="email" placeholder="coffyayawa@GMAIL.com" required maxLength={150} />
             </div>
           </div>
           <div className="cform__row">
