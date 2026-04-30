@@ -451,19 +451,24 @@ function ServicesPage({ go }) {
 
       <div className="full-svcs">
         <div className="full-svcs__head">
-          <span className="sec-label">Ce que nous proposons</span>
-          <h2 className="sec-title">Nos prestations</h2>
+          <span className="sec-label">Nos offres</span>
+          <h2 className="sec-title">Choisissez votre séjour</h2>
           <p className="sec-sub">
-            De l'organisation complète à l'expérience unique, nous couvrons tous vos besoins de voyage au Ghana.
+            Des packages tout compris conçus pour chaque type de voyageur — couple, duo ou groupe.
           </p>
         </div>
-        <div className="full-svcs__grid">
-          {svcs.map(s => (
-            <div className="fsvc-card" key={s.name}>
-              <div className="fsvc-card__img" style={{ backgroundImage: `url(${s.img})` }} />
-              <div className="fsvc-card__body">
-                <p className="fsvc-card__name">{s.name}</p>
-                <p className="fsvc-card__desc">{s.desc}</p>
+        <div className="pkg-grid">
+          {[
+            { img: '/src/offre%20couple.jpg',           alt: 'Package Couple — 5 jours / 4 nuits' },
+            { img: '/src/offre%202personnes.jpg',        alt: 'Offre Séjour — 3 nuits / 4 jours pour 2 personnes' },
+            { img: '/src/entreprise%20ou%20groupe.jpg',  alt: 'Offre Entreprises / Groupes' },
+          ].map(p => (
+            <div className="pkg-card" key={p.alt}>
+              <img src={p.img} alt={p.alt} loading="lazy" />
+              <div className="pkg-card__footer">
+                <button className="btn btn--orange" onClick={() => go('contact')}>
+                  Réserver cette offre
+                </button>
               </div>
             </div>
           ))}
