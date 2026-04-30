@@ -608,8 +608,8 @@ img { display:block; max-width:100%; }
   color:#fff; margin-bottom:.4rem;
 }
 .footer__txt  { font-size:.86rem; line-height:1.78; }
-.footer__lnk  { font-size:.86rem; transition:color var(--t); display:block; }
-.footer__lnk:hover { color:#fff; }
+.footer__lnk  { font-size:.86rem; transition:color var(--t); display:block; color:#fff; }
+.footer__lnk:hover { color:var(--orange); }
 .footer__bot {
   max-width:1200px; margin:1.8rem auto 0;
   display:flex; justify-content:space-between; align-items:center;
