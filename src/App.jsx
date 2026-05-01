@@ -137,7 +137,7 @@ function Footer({ go }) {
         </div>
       </div>
       <div className="footer__bot">
-        <span>© 2024 <span className="footer__bot-brand">Eudoxie Escapes</span>. Tous droits réservés.</span>
+        <span>© 2026 <span className="footer__bot-brand">Eudoxie Escapes</span>. Tous droits réservés.</span>
         <span>Accra · Abidjan</span>
       </div>
     </footer>
