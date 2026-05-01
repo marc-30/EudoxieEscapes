@@ -767,7 +767,7 @@ function ContactPage() {
             </div>
             <div className="fg">
               <label htmlFor="from_email">Email *</label>
-              <input id="from_email" name="from_email" type="email" placeholder="coffyayawa@GMAIL.com" required maxLength={150} />
+              <input id="from_email" name="from_email" type="email" placeholder="contact@eudoxieescapes.com" required maxLength={150} />
             </div>
           </div>
           <div className="fg">
